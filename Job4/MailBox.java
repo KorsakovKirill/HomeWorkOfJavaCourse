@@ -2,42 +2,40 @@ package ru.mera.korsakovkirill.postman;
 
 import java.util.ArrayList;
 
-public class MailBox{
+public class MailBox {
 
-	ArrayList<String> elMessage = new ArrayList<String>();
-	ArrayList<String> letMessage = new ArrayList<String>();
+	Message message = new Message();
 
-	//Add Email 
-	String addElMessage(String elMes) {
-		elMessage.add(elMes);
-		return elMes;
+	Email email = new Email();
+
+	Letter letter = new Letter();
+
+	ArrayList<Email> elMessage = new ArrayList<Email>();
+
+	ArrayList<Letter> letMessage = new ArrayList<Letter>();
+
+	Email addElMessage(Email messageBody) {
+		elMessage.add(messageBody);
+		return messageBody;
 	}
-	
-	//Add letter
-	String addLetMessage(String letMes) {
-		letMessage.add(letMes);
-		return letMes;
+
+	Letter addLetMessage(Letter messageBody) {
+		letMessage.add(messageBody);
+		return messageBody;
 	}
-	
-	//Show all emails
-	void showAllElMessages() {
+
+	void showAllElMessages(Object person) {
 		System.out.println("\nAll Email ");
-		for(int i = 0; i < elMessage.size(); i++) {
-			int j = 1;
-			j += i;
-			System.out.println(j + " - " + elMessage.get(i));
+		for (Email email : elMessage) {
+			System.out.println(" " + person + email);
 		}
 	}
-	
-	//Show all Letter
-		void showAllLetMessages() {
-			System.out.println("\nAll letter ");
-			for(int i = 0; i < letMessage.size(); i++) {
-				int j = 1;
-				j += i;
-				System.out.println(j + " - " + letMessage.get(i));
-			}
+
+	void showAllLetMessages(Object person) {
+		System.out.println("\nAll letter ");
+		for (Letter letter : letMessage) {
+			System.out.println(" " + person + letter);
 		}
-	
-	
+	}
+
 }

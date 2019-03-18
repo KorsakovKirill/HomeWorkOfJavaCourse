@@ -2,24 +2,32 @@ package ru.mera.korsakovkirill.postman;
 
 import java.util.Date;
 
-class Email extends Message {
-	
-	private String from;
-	private String to;
-	private String message_body;
-	private Date receive_date;
-	
+final class Email extends Message {
+
+	private Date receiveDate;
+
+	public Email() {
+
+	}
+
+	public Email(String messageBody) {
+		this.messageBody = messageBody;
+	}
+
 	public String getFrom() {
 		return from;
 	}
+
 	public String getTo() {
 		return to;
 	}
-	public String getMessage_body() {
-		return message_body;
+
+	public String getMessageBody() {
+		return messageBody;
 	}
-	public Date getReceive_date() {
-		return (Date)receive_date.clone();
+
+	public Date getReceiveDate() {
+		return (Date) receiveDate.clone();
 	}
 
 }

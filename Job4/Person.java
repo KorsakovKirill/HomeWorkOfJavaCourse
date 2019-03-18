@@ -3,17 +3,28 @@ package ru.mera.korsakovkirill.postman;
 public class Person {
 
 	private String name;
-	private String surname;
+	private String sername;
 
-	
+	public Person() {
+
+	}
+
+	public Person(String name, String sername) {
+		this.name = name;
+		this.sername = sername;
+	}
+
 	public String getName() {
 		return name;
 	}
-	
-	public String getSurname() {
-		return surname;
+
+	public String getSername() {
+		return sername;
 	}
-	public Person() {
-		// TODO Auto-generated constructor stub
+
+	@Override
+	public String toString() {
+		return "От " + name + "а" + " " + sername + "а" + ": ";
 	}
+
 }
