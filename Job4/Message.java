@@ -6,6 +6,12 @@ public abstract class Message {
 	protected Person to;
 	protected String messageBody;
 
+	public Message(Person from, String messageBody, Person to) {
+		this.from = from;
+		this.to = to;
+		this.messageBody = messageBody;
+	}
+	
 	public Person getFrom() {
 		return from;
 	}
@@ -17,5 +23,4 @@ public abstract class Message {
 	public String getMessageBody() {
 		return messageBody;
 	}
-
 }

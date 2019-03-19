@@ -3,12 +3,11 @@ package ru.mera.korsakovkirill.postman;
 import java.util.Date;
 
 public class JobFourth {
-
+	
 	public static void main(String[] args) throws InterruptedException {
 
 		MailBox mailBox = new MailBox();
 		MailBox mailBox1 = new MailBox();
-
 		Person personFrom = new Person("Kirill", "Korsakov");
 		Person personTo = new Person("Павел", "Попов");
 
@@ -25,5 +24,4 @@ public class JobFourth {
 		mailBox.showAllLetMessages();
 
 	}
-
 }

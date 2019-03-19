@@ -6,10 +6,7 @@ final class Letter extends Message {
 	private final int toPostalIndex;
 
 	public Letter(Person from, String messageBody, Person to, int fromPostalIndex, int toPostalIndex) {
-		super();
-		this.from = from;
-		this.messageBody = messageBody;
-		this.to = to;
+		super(to, messageBody, to);
 		this.fromPostalIndex = fromPostalIndex;
 		this.toPostalIndex = toPostalIndex;
 	}
@@ -27,5 +24,4 @@ final class Letter extends Message {
 		return "Отправитель - " + from + ": " + messageBody + " Получатель - " + to + ". Почтовый индекс отправителя - "
 				+ fromPostalIndex + ". Почтовый индекс получателя - " + toPostalIndex + ".";
 	}
-
 }

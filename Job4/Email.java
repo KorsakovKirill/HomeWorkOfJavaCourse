@@ -7,10 +7,7 @@ final class Email extends Message {
 	private final Date receiveDate;
 
 	public Email(Person from, String messageBody, Person to, Date receiveDate) {
-		super();
-		this.from = from;
-		this.messageBody = messageBody;
-		this.to = to;
+		super(to, messageBody, to);
 		this.receiveDate = receiveDate;
 	}
 
@@ -23,5 +20,4 @@ final class Email extends Message {
 		return "Отправитель - " + from + ": " + messageBody + " Получатель - " + to + ". Дата получения сообщения - "
 				+ receiveDate;
 	}
-
 }
