@@ -1,30 +1,26 @@
 package ru.mera.korsakovkirill.postman;
 
-public class Person {
+public final class Person {
 
-	private String name;
-	private String sername;
+	private final String name;
+	private final String surname;
 
-	public Person() {
-
-	}
-
-	public Person(String name, String sername) {
+	public Person(String name, String surname) {
 		this.name = name;
-		this.sername = sername;
+		this.surname = surname;
 	}
 
 	public String getName() {
 		return name;
 	}
 
-	public String getSername() {
-		return sername;
+	public String getSurname() {
+		return surname;
 	}
 
 	@Override
 	public String toString() {
-		return "От " + name + "а" + " " + sername + "а" + ": ";
+		return name + " " + surname;
 	}
 
 }

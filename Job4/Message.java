@@ -1,25 +1,20 @@
 package ru.mera.korsakovkirill.postman;
 
-public class Message {
+public abstract class Message {
 
-	protected String from;
-	protected String to;
+	protected Person from;
+	protected Person to;
 	protected String messageBody;
 
-	public String getFrom() {
+	public Person getFrom() {
 		return from;
 	}
 
-	public String getTo() {
+	public Person getTo() {
 		return to;
 	}
 
 	public String getMessageBody() {
-		return messageBody;
-	}
-
-	@Override
-	public String toString() {
 		return messageBody;
 	}
 

@@ -4,30 +4,24 @@ import java.util.Date;
 
 final class Email extends Message {
 
-	private Date receiveDate;
+	private final Date receiveDate;
 
-	public Email() {
-
-	}
-
-	public Email(String messageBody) {
+	public Email(Person from, String messageBody, Person to, Date receiveDate) {
+		super();
+		this.from = from;
 		this.messageBody = messageBody;
-	}
-
-	public String getFrom() {
-		return from;
-	}
-
-	public String getTo() {
-		return to;
-	}
-
-	public String getMessageBody() {
-		return messageBody;
+		this.to = to;
+		this.receiveDate = receiveDate;
 	}
 
 	public Date getReceiveDate() {
 		return (Date) receiveDate.clone();
+	}
+
+	@Override
+	public String toString() {
+		return "Отправитель - " + from + ": " + messageBody + " Получатель - " + to + ". Дата получения сообщения - "
+				+ receiveDate;
 	}
 
 }

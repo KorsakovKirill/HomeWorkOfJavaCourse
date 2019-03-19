@@ -2,27 +2,16 @@ package ru.mera.korsakovkirill.postman;
 
 final class Letter extends Message {
 
-	private int fromPostalIndex;
-	private int toPostalIndex;
-	
-	public Letter() {
-		
-	}
+	private final int fromPostalIndex;
+	private final int toPostalIndex;
 
-	public Letter(String messageBody) {
+	public Letter(Person from, String messageBody, Person to, int fromPostalIndex, int toPostalIndex) {
+		super();
+		this.from = from;
 		this.messageBody = messageBody;
-	}
-	
-	public String getFrom() {
-		return from;
-	}
-
-	public String getTo() {
-		return to;
-	}
-
-	public String getMessageBody() {
-		return messageBody;
+		this.to = to;
+		this.fromPostalIndex = fromPostalIndex;
+		this.toPostalIndex = toPostalIndex;
 	}
 
 	public int getFromPostalIndex() {
@@ -31,6 +20,12 @@ final class Letter extends Message {
 
 	public int getToPostalIndex() {
 		return toPostalIndex;
+	}
+
+	@Override
+	public String toString() {
+		return "Отправитель - " + from + ": " + messageBody + " Получатель - " + to + ". Почтовый индекс отправителя - "
+				+ fromPostalIndex + ". Почтовый индекс получателя - " + toPostalIndex + ".";
 	}
 
 }

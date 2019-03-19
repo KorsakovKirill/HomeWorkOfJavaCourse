@@ -6,7 +6,7 @@ public class Gamer {
 	String name;
 
 	public Gamer() {
-
+		
 	}
 
 	public Gamer(String name, String condition) {
